@@ -61,13 +61,24 @@ function browsersync() {
 }
 
 function scripts() {
-  return src(['app/libs/common.js', 'app/libs/dom.js', 'app/libs/events.js', 'app/libs/loops.js', 'app/libs/function.js', 'app/libs/dom.js'])
-    .pipe(strip())
-    .pipe(rigger())
-    .pipe(concat('scripts.min.js'))
-    .pipe(uglify())
-    .pipe(dest('app/js/'))
-    .pipe(browserSync.stream());
+  return (
+    src([
+      //     'app/libs/common.js',
+      //    'app/libs/dom.js',
+      //    'app/libs/events.js',
+      //    'app/libs/loops.js',
+      //    'app/libs/function.js',
+      //    'app/libs/dom.js',
+      'app/libs/biglesson.js',
+      'app/libs/testwork.js',
+    ])
+      .pipe(strip())
+      .pipe(rigger())
+      .pipe(concat('scripts.min.js'))
+      //   .pipe(uglify())
+      .pipe(dest('app/js/'))
+      .pipe(browserSync.stream())
+  );
 }
 
 function images() {

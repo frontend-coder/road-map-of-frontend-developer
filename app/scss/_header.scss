@@ -13,14 +13,89 @@
   background-color: #008000;
 }
 
+.container * {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.block {
+  background-color: #008000;
+}
+
+.block .container {
+  padding: 60px 0;
+}
+
 .block_title {
   color: #ffffff;
 }
 
 .kljl {
+  display: inline-block;
   align-items: center;
   justify-content: center;
-text-align: left;
-color:#ff7f50;
-text-align: center;
+  text-align: left;
+  text-align: center;
+  color: #ff7f50;
+}
+
+.take_inputs,
+.take_input {
+  margin: 20px;
+  height: 30px;
+  text-indent: 10px;
+}
+
+.menu {
+  display: inline-block;
+}
+
+.menu._active .menu_list {
+  display: block;
+}
+
+.menu_button span:first-child {
+  display: block;
+}
+
+.menu_button span:last-child {
+  display: none;
+}
+
+.menu._active .menu_button span:first-child {
+  display: none;
+}
+
+.menu._active .menu_button span:last-child {
+  display: block;
+}
+
+.green_sq-wrapper {
+  padding: 30px;
+}
+
+.green_sq {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}
+
+.block-for-mouse {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+
+.block-for-mouse span {
+  display: inline-block;
+  width: 31%;
+  height: 31%;
+  text-align: center;
+  color: #ffffff;
 }

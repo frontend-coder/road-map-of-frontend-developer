@@ -61,4 +61,58 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.vivod-content').style.cssText = 'margin-bottom:40px; margin-top:30px;';
   document.querySelector('.vivod-content span:nth-child(1)').textContent = 'Перший абзац у блоці.';
   document.querySelector('.vivod-content span:nth-child(1)').innerHTML = 'Другий абзац у блоці.';
+
+  // Просто отримати
+  const takeOne = +document.getElementById('take__one').textContent;
+  const takeOneOne = document.querySelector('.take__one');
+
+  const takeTwoC = +document.querySelector('.take_two').innerText;
+  document.querySelector('.take__two').textContent = takeTwoC;
+
+  takeOneOne.style.cssText = 'margin:20px; display:inline-block';
+
+  function takeCoun() {
+    const takeResult = takeOne + takeTwoC;
+    return takeResult;
+  }
+  document.querySelector('.take_result').textContent = takeCoun;
+  document.querySelector('.take_result-anothe').textContent = takeCoun();
+  document.querySelector('.take_oneVivod').textContent = takeOne;
+  console.log(takeTwoC);
+
+  const textButton = document.querySelector('.text_button');
+  const textButtons = document.querySelector('.text_buttons');
+
+  function getData() {
+    const takeInput = +document.querySelector('.take_input').value;
+    return takeInput;
+  }
+
+  function dataTwo() {
+    const r = 2 + 4;
+    return r;
+  }
+
+  textButton.addEventListener('click', () => {
+    const takeInputV = +document.querySelector('.take_input').value;
+    document.querySelector('.take_result-ones').textContent = takeInputV;
+
+    const result = dataTwo() * takeInputV + getData();
+    document.querySelector('.take_result-fun').textContent = result;
+  });
+  function dataPuto(e) {
+    const r = (2 + 5) * e;
+    return r;
+  }
+
+  textButtons.addEventListener('click', () => {
+    const takeInputV = +document.querySelector('.take_input').value;
+    document.querySelector('.take_result-ones').textContent = takeInputV;
+
+    const result = dataPuto('.take_inputs') * takeInputV + getData();
+    document.querySelector('.take_result-fun').textContent = result;
+  });
+  /**
+   * Нижче ге працювати
+   */
 });
