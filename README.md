@@ -1,9 +1,9 @@
 # Road map of frontend developer lerning
 
-Дорожня карта вивчення Javascript
-Bogdan Stashchuk | JavaScript - Повний курс по JavaScript (80 завдань)
-Ivan Petrichenko | Complete course on JavaScript + React - from scratch to results
-Сучасний підручник з JavaScript
+1. [Дорожня карта вивчення Javascript](https://github.com/frontend-coder/roadmapoffrontenddeveloper/blob/main/roadmap-javascript.md)
+2. [Bogdan Stashchuk | JavaScript - Повний курс по JavaScript (80 завдань)](https://github.com/frontend-coder/roadmapoffrontenddeveloper/blob/main/Bogdan-Stashchuk-Complete-JavaScript-Course.md)
+3. [Ivan Petrichenko | Complete course on JavaScript + React - from scratch to results](https://github.com/frontend-coder/roadmapoffrontenddeveloper/blob/main/Petrichenko-Complete-course-JavaScript-React.md)
+4. [Сучасний підручник з JavaScript](https://github.com/frontend-coder/roadmapoffrontenddeveloper/blob/main/uk-javascript.md)
 
 ## Звязатися зі мною з питань розробки сайті під ключ
 

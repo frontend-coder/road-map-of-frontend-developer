@@ -63,12 +63,13 @@ function browsersync() {
 
 function scripts() {
   return src([
-    'app/libs/plugins/jquery.min.js',
+    //  'app/libs/plugins/jquery.min.js',
     //	'app/libs/plugins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
     //	'app/libs/plugins/magnific-popup/jquery.magnific-popup.min.js',
     //	'app/libs/plugins/slick/slick.min.js',
     //node-modules/swiper/swiper-bundle.js,
-    'app/libs/common.js',
+    'app/libs/datatype.js',
+    // 'app/libs/common.js',
   ])
     .pipe(strip())
     .pipe(rigger())
