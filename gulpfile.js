@@ -50,6 +50,7 @@ function styles() {
     ) // Opt., comment out when debugging
     .pipe(sourcemaps.write(''))
     .pipe(dest('app/css/'));
+  //  .pipe(browserSync.stream());
 }
 
 function browsersync() {
@@ -61,24 +62,20 @@ function browsersync() {
 }
 
 function scripts() {
-  return (
-    src([
-      //     'app/libs/common.js',
-      //    'app/libs/dom.js',
-      //    'app/libs/events.js',
-      //    'app/libs/loops.js',
-      //    'app/libs/function.js',
-      //    'app/libs/dom.js',
-      'app/libs/biglesson.js',
-      'app/libs/testwork.js',
-    ])
-      .pipe(strip())
-      .pipe(rigger())
-      .pipe(concat('scripts.min.js'))
-      //   .pipe(uglify())
-      .pipe(dest('app/js/'))
-      .pipe(browserSync.stream())
-  );
+  return src([
+    'app/libs/plugins/jquery.min.js',
+    //	'app/libs/plugins/page-scroll-to-id-master/js/minified/jquery.malihu.PageScroll2id.min.js',
+    //	'app/libs/plugins/magnific-popup/jquery.magnific-popup.min.js',
+    //	'app/libs/plugins/slick/slick.min.js',
+    //node-modules/swiper/swiper-bundle.js,
+    'app/libs/common.js',
+  ])
+    .pipe(strip())
+    .pipe(rigger())
+    .pipe(concat('scripts.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js/'))
+    .pipe(browserSync.stream());
 }
 
 function images() {
@@ -99,6 +96,7 @@ function startwatch() {
   watch('app/**/*.html').on('change', browserSync.reload);
   watch('app/**/*.php').on('change', browserSync.reload);
   watch('app/css/*.css').on('change', browserSync.reload);
+  //  watch('app/js/*.js').on('change', browserSync.reload);
   watch(['app/**/*.js', '!app/**/*.min.js'], scripts);
 }
 
